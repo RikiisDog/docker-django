@@ -32,7 +32,7 @@ docker-django
 │ 　 └ uwsgi_params
 ├ src
 │ ├ myproject
-│ │ ├ __pycashe__
+│ │ ├ __pycache__
 │ │ ├ __init__.py
 │ │ ├ asgi.py
 │ │ ├ settings.py
@@ -43,7 +43,9 @@ docker-django
 │ ├ uwsgi.ini
 │ ├ uwsgi.pid
 │ └ uwsgi.sock
-└ docker-compose.yml
+├ .gitignore
+├ docker-compose.yml
+└ README.md
 ```
 
 ### 1.リポジトリをクローン
@@ -58,7 +60,7 @@ $ docker-compose build
 
 ### 3.Djangoプロジェクト作成
 ```
-$ docker-compose --rm run app django-admin startproject myproject .
+$ docker-compose run --rm app django-admin startproject myproject .
 ```
 
 ### 4.settings.pyを編集
