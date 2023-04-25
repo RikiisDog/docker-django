@@ -19,7 +19,8 @@ services:
     expose:
       - "8080"
     volumes:
-      - ./docker/app:/project
+      - ./src:/project
+      - ./docker/app/uwsgi.ini:/project/uwsgi.ini
     depends_on:
       - db
     command: uwsgi --ini /project/uwsgi.ini
@@ -32,7 +33,7 @@ services:
     volumes:
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./docker/nginx/uwsgi_params:/etc/nginx/uwsgi_params
-      - ./docker/app:/project
+      - ./src:/project
     depends_on:
       - app
 
