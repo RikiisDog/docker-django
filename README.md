@@ -1,4 +1,4 @@
-# docker-django-postgre
+# docker-django-nginx-uwsgi-postgresql
 
 ### ローカル環境
 - Windows 10 Home 22H2
